@@ -1753,6 +1753,7 @@
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
 				HEADER_SEARCH_PATHS = (
 					External/libgit2/include,
+					/usr/local/opt/openssl/lib,
 					/opt/homebrew/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -1792,6 +1793,7 @@
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
 				HEADER_SEARCH_PATHS = (
 					External/libgit2/include,
+					/usr/local/opt/openssl/lib,
 					/opt/homebrew/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -1877,6 +1879,7 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					External/libgit2/include,
+					/usr/local/opt/openssl/lib,
 					/opt/homebrew/include,
 				);
 				INFOPLIST_FILE = "ObjectiveGitTests/ObjectiveGitTests-Info.plist";
@@ -1898,6 +1901,7 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					External/libgit2/include,
+					/usr/local/opt/openssl/lib,
 					/opt/homebrew/include,
 				);
 				INFOPLIST_FILE = "ObjectiveGitTests/ObjectiveGitTests-Info.plist";
@@ -1925,6 +1929,7 @@
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
 				HEADER_SEARCH_PATHS = (
 					External/libgit2/include,
+					/usr/local/opt/openssl/lib,
 					/opt/homebrew/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -1986,6 +1991,7 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					External/libgit2/include,
+					/usr/local/opt/openssl/lib,
 					/opt/homebrew/include,
 				);
 				INFOPLIST_FILE = "ObjectiveGitTests/ObjectiveGitTests-Info.plist";
@@ -2145,6 +2151,7 @@
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = NO;
 				HEADER_SEARCH_PATHS = (
 					External/libgit2/include,
+					/usr/local/opt/openssl/lib,
 					/opt/homebrew/include,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -2206,6 +2213,7 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					External/libgit2/include,
+					/usr/local/opt/openssl/lib,
 					/opt/homebrew/include,
 				);
 				INFOPLIST_FILE = "ObjectiveGitTests/ObjectiveGitTests-Info.plist";
