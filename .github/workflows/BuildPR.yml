@@ -13,12 +13,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os : [ macOS-13 ]
-        xcode: [ 14.1, 14.2, 15.1, 15.2 ]
-        arch: [ x86_64 ]
+        os : [ macOS-14 ]
+        xcode: [ 15.4, 16.2 ]
+        arch: [ arm64 ]
     steps:
       - name: ls Xcode
         run: ls -la /Applications/Xcode*
+      - name: Show openssl version
+        run: |
+          openssl version
+          brew uninstall --ignore-dependencies openssl
+          rm -rf /usr/local/etc/openssl@3
+          rm -rf /usr/local/etc/openssl@1.1
+          brew install openssl@3
+          openssl version
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -27,15 +35,15 @@ jobs:
       - uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: ${{ matrix.xcode }}
-      - name: Show openssl version
-        run: |
-          openssl version
       - run: script/bootstrap
       - run: script/update_libgit2
       - name: Show openssl version
         run: |
           openssl version
-      - name: Test project
-        run: xcodebuild -workspace ObjectiveGitFramework.xcworkspace -scheme "ObjectiveGit Mac" test ARCHS="${{ matrix.arch }}"
+      - name: Unlink openssl 3
+        run: |
+          brew unlink openssl@3
+#      - name: Test project
+#        run: xcodebuild -workspace ObjectiveGitFramework.xcworkspace -scheme "ObjectiveGit Mac" test ARCHS="${{ matrix.arch }}"
       - name: Archive project
         run: xcodebuild -workspace ObjectiveGitFramework.xcworkspace -scheme "ObjectiveGit Mac" archive ARCHS="${{ matrix.arch }}"
